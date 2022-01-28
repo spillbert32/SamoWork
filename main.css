@@ -1,0 +1,74 @@
+* {
+	margin: 0; /* Обнуляем все отступы браузера по-умолчанию */
+	padding: 0;
+}
+
+html {
+	font-size: 20px;
+}
+
+/* BODY */
+body {
+	background-image: url('img/bg-img.jpg');
+	min-width: 800px;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/* *BODY */
+
+/* HEADER */
+body > header {
+	background-color: rgba(255,255,255, 1);
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.ctrl-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.ctrl-panel li { list-style: none; }
+/* *HEADER */
+
+/* NAV */
+nav {
+	background-color: rgba(255,255,255, 1);
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	padding: 0.5rem;
+	color: #333;
+	border: thin solid #000;
+}
+/* *NAV */
+
+main {
+	background-color: rgba(255,255,255, 1);
+	padding: 1rem;
+	margin: 2rem 0;
+}
+
+/* #REG */
+#reg {
+	width: 100%;
+	max-width: 600px;
+	min-width: 480px;
+	margin: auto;
+}
+/* *#REG */
