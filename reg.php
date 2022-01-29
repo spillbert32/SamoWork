@@ -3,13 +3,7 @@
 	if($_SESSION["login"] != "") {
 		header("Location: /");
 	}
-	// Подключив модуль нам теперь доступны и переменные в нём
-	// $login
-	// $password
-	// $conn
-	// $host
-	// $db
-	// Будьте внимательны!! Не используйте эти именя в качестве имён переменых для данного модуля
+	
 	require_once "include/mysqli.php";
 	
 	if(!empty($_POST)) {
@@ -28,7 +22,7 @@
 							add_usr($user, $password);
 							
 							// указываем в заголовочном файле перенправление на главную страницу через 2 секунды
-							header("Refresh: 2; url=index.html");
+							header("Refresh: 2; url=index.php");
 							
 						} else
 							$error = "Пароль не может быть пустым";
@@ -62,6 +56,7 @@
 	<?php 
 		require_once "block/header.php"; // шапка сайта
 		require_once "block/nav.php"; // меню 
+		
 	?>
 	
 	<main>
@@ -86,16 +81,18 @@ _OUT;
 	?>
 		
 		<form id="reg" method="post">
-			<fieldset>
-				<legend>Регистрация</legend>
+			
+				<h2>Регистрация</h2>
 				
-				<input type="email" name="login" placeholder="Введите Ваш e-mail" required><br>
-				<input type="password" name="password" placeholder="Ваш сложный пароль" required><br>
-				<input type="password" name="repeatpassword" placeholder="Повторите Ваш сложный пароль" required><br>
+				<input type="email" name="login" placeholder="E-mail" required><br>
+				<input type="password" name="password" placeholder="Пароль" required><br>
+				<input type="password" name="repeatpassword" placeholder="Повторите пароль" required><br>
 				<input type="submit" value="Зарегистрироваться">
-			</fieldset>
+			
 		</form>
-		
+		<?php 
+		require_once "block/footer.php";
+	?>
 	</main>
 	
 

@@ -16,7 +16,7 @@
 						$_SESSION["login"] = $usr; //сохраняем имя пользователя
 						$_SESSION["status"] = get_user_status($usr); //права пользователя
 						//var_dump(get_user_status($usr));
-						header("Refresh: 2; url=index.html");
+						header("Refresh: 2; url=index.php");
 						
 				} else {
 					$error = "Не правильный логин или пароль";
@@ -47,6 +47,7 @@
 	<?php 
 		require_once "block/header.php"; // шапка сайта
 		require_once "block/nav.php"; // меню 
+		
 	?>
 	
 	<main>
@@ -72,12 +73,14 @@ _OUT;
 		?>
 		
 		<form id="sign-up" method="POST">
-			<input type="email" name="login" placeholder="Login" required>
-			<input type="password" name="password" placeholder="Password" required>
-			<input type="submit" name="sign-up-submit" value="Sing up">
+			<input type="email" name="login" placeholder="E-mail" required>
+			<input type="password" name="password" placeholder="Пароль" required>
+			<input type="submit" name="sign-up-submit" value="Войти">
 		</form>
 		
-	</main>
+	</main><?php 
+		require_once "block/footer.php";
+	?>
 	
 
 </body>

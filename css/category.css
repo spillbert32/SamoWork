@@ -1,0 +1,73 @@
+
+.hidden {
+	display: none;
+}
+
+main{
+	background-color:#FFD073;
+	
+}
+
+article {
+	min-width: 800px;
+	max-width: 1280px;
+	height: 300px;
+	border-radius: 10px;
+    box-shadow: 0 0 0 3px #ff4f00;
+	margin-top: 20px;
+	
+}
+.p{
+	text-align: right;
+}
+.name {
+	font-family: Helvetica;
+	font-size: 1.6rem;
+	font-weight: 600;
+	padding: 0.5rem;
+}
+
+.description {
+	text-indent: 1.5rem;
+	text-align: justify;
+	padding: 0 1rem;
+}
+
+.price {
+	text-align: right;
+	font-weight: 600px;
+	font-family: Helvetica;
+	
+}
+
+.price:after {
+	content: "р."
+}
+
+.wrap {
+	display: flex;
+}
+
+.wrap figure {
+	
+	width: 33%;
+	height: auto;
+}
+
+.wrap img {
+	max-width: 50%;
+	height: auto;
+}
+
+.tools {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.tools img {
+	width: 100%;
+}
+

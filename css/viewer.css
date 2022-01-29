@@ -1,0 +1,48 @@
+/* VIEWER */
+
+article {
+	width: 100%;
+	max-width: 800px;
+	min-width: 600px;
+	margin: 0 auto;
+}
+
+header {
+	padding: 1rem;
+}
+
+h1 {
+	font-size: 2rem;
+	font-family: Helvetica;
+	font-weight: 600;
+}
+
+.price {
+	font-family: Arial;
+	font-weight: 600;
+	color: #555;
+	text-align: right;
+}
+
+.price:after {
+	content: "р.";
+}
+
+figure {
+	width: 400px;
+}
+
+figure img{
+	max-width: 100%;
+}
+
+blockquote {
+	padding: 1rem;
+	
+	
+	margin: 0.5rem 0;
+}
+
+
+
+/* *VIEWER */

@@ -1,0 +1,67 @@
+/* TRASH */
+
+article {
+	min-width: 600px;
+	width: 1000px;
+	max-width: 1800px;
+	height: 200px;
+	border-radius: 10px;
+    box-shadow: 0 0 0 3px #ff4f00;
+	margin-top: 20px;
+	
+}
+
+.name {
+	font-family: Helvetica;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.5rem;
+}
+
+.description {
+	text-indent: .5rem;
+	text-align: justify;
+	padding: 0 1rem;
+}
+
+.price {
+	text-align: right;
+	font-weight: 600;
+	font-family: Helvetica;
+	padding: .5rem;
+}
+
+.p{
+	text-align: right;
+}
+
+.price:after {
+	content: "р."
+}
+
+.wrap {
+	display: flex;
+}
+
+.wrap figure {
+	margin: 0 .5rem;
+	width: 100px;
+	height: auto;
+}
+
+.wrap img {
+	max-width: 100%;
+	height: auto;
+}
+
+input.submit {
+	font-size: 2rem;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 100%;
+	padding: 1rem;
+}
+
+
+
+/* *TRASH */

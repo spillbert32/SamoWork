@@ -1,74 +1,131 @@
 * {
-	margin: 0; /* Обнуляем все отступы браузера по-умолчанию */
+	margin: 0;
 	padding: 0;
 }
-
-html {
-	font-size: 20px;
+a{
+	text-decoration: none;
 }
 
-/* BODY */
+html, body {
+	background-color:#FFAA00; 
+    height: 100%;
+}
+
+.main_logo .logo_text {
+    color: #000;
+    font-size: 240%;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.logo_reg .head_reg{
+    color: #000;
+    font-size: 120%;
+    font-weight: bold;
+padding: 10px;}
+
+.main_logo {
+    background: #FFD073;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+	
+}
+
+.main_logo .logo {
+    margin: 20px;
+    padding: 4px;
+}
+
+.main_logo .logo a:hover {
+    border: 2px solid #FF0000;
+	text-align: center;
+}
+
+.main_logo .logo_reg {
+    margin: 20px;
+    padding: 8px; 
+}
+
+.main_logo .logo_reg a:hover {
+    border: 2px solid #FF0000;
+}
 body {
-	background-image: url('img/bg-img.jpg');
+	max-width: 1280px;
 	min-width: 800px;
-	width: 100%;
-	max-width: 1000px;
+	width: 100%;;
 	margin: 0 auto;
 }
-/* *BODY */
 
-/* HEADER */
 body > header {
-	background-color: rgba(255,255,255, 1);
+	background-color:#FFAA00; 
 	height: 200px;
 	display: flex;
-	justify-content: space-between;
+
 	align-items: stretch;
 }
 
+
 .ctrl-panel {
+	font-size: 140%;
+	margin: 30px;
 	display: flex;
-	flex-direction: column;
+	width: 1000px;
 	justify-content: space-around;
+	height: 20px;
+	font-weight: bold;
+	color: #000;
+	
 }
-
+.ctrl-panel a:hover {
+	border: 2px solid #FF0000;
+text-align: center;}
 .ctrl-panel li { list-style: none; }
-/* *HEADER */
 
-/* NAV */
-nav {
-	background-color: rgba(255,255,255, 1);
+.topnav {
+    background-color: #FFAA00;
+    font-size: 20px;
+    margin-top: 40px;
+	
 }
 
-nav ul {
-	display: flex;
-	justify-content: space-around;
+.topnav a {
+    color: #000;
+    font-size: 140%; 
+	align-items: center;
+    padding: 14px 16px;
+    text-align: center;
 }
 
-nav ul li {
-	list-style: none;
+.topnav a:hover {
+    border: 2px solid #FF0000;
 }
 
-nav a {
-	display: block;
-	text-decoration: none;
-	padding: 0.5rem;
-	color: #333;
-	border: thin solid #000;
-}
-/* *NAV */
 
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 0 15px 0;
+    flex: 0 0 auto;
+}
 main {
 	background-color: rgba(255,255,255, 1);
 	padding: 1rem;
 	margin: 2rem 0;
 }
 
-/* #REG */
 #reg {
 	width: 100%;
 	max-width: 600px;
 	min-width: 480px;
 	margin: auto;
 }
-/* *#REG */
+footer a {
+    color: #000;
+   
+    font-size: 120%;
+    margin-left: 10px;
+}
