@@ -86,7 +86,7 @@ if(!empty($_POST))
 							</div>
 							<div class="price">$price</div>
 							<div class="p">
-							<a href="viewer.php?product=$id" class="btn">Подробнее</a>
+							<a href="viewer.html?product=$id" class="btn">Подробнее</a>
 							</div>
 						</article>
 _OUT;

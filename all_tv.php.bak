@@ -4,20 +4,19 @@
 	
 	define("MAX_PRODUCTS_ON_PAGE", 4);
 	
-	if(!empty($_GET["category"])) {
+	
 		$category = $_GET["category"];
 	
 		//var_dump($category);
 		db_connect();
 		
 		// многомерный массив с результирующей таблицей
-		$result = db_select("product", "category='$category'");
+		$result = db_select("product");
 		//var_dump($result );
 		
 		
 		db_close();
-	} else
-		header("Location: /");
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,6 +36,16 @@
 	?>
 	
 	<main>
+	<form name="search" method="post">
+    <input type="search" name="query" placeholder="Поиск">
+    <button type="submit">Найти</button> 
+	<?php 
+if (!empty($_POST['query'])) { 
+    $search_result = search ($_POST['query']); 
+    echo $search_result; 
+}
+?>
+</form>
 		<?php
 			$count_article = 0;
 			
@@ -63,7 +72,10 @@
 							</div>
 							<div class="price">$price</div>
 							<div class="p">
+							<div class="p">
 							<a href="viewer.php?product=$id" class="btn">Подробнее</a>
+							</div>
+							
 							<button type="button" onclick="productInTrash($id)">Заказать</button>
 							</div>
 						</article>
@@ -83,12 +95,15 @@ _OUT;
 							</div>
 							<div class="price">$price</div>
 							<div class="p">
+							<div class="p">
+							<a href="viewer.php?product=$id" class="btn">Подробнее</a>
+							</div>
 							
 							<a class="tools" href="edit.php?product=$id"><img src="img/edit.png"></a>
 							<a class="tools" href="delete.php?product=$id"><img src="img/delete.png"></a>
 						
 							<button type="button" onclick="productInTrash($id)">Заказать</button>
-							<a href="viewer.php?product=$id" class="btn">Подробнее</a>
+							
 							</div>
 						</article>
 _OUT;
@@ -107,7 +122,7 @@ _OUT;
 							</div>
 							<footer class="price">$price</footer>
 							<div class="p">
-							<a href="viewer.php?product=$id" class="btn">Посмотреть</a>
+							
 							</div>
 						</article>
 _OUT;
@@ -123,9 +138,7 @@ _OUT;
 			
 		?>
 		
-		<?php 
-		require_once "block/footer.php";
-	?>
+	
 	</main>
 	
 

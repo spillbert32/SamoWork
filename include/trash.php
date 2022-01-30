@@ -14,4 +14,4 @@
 		echo count($_SESSION["trash"]);
 	}
 
-?>
+?><meta http-equiv = "Refresh" CONTENT="0; URL = /trash.php">

@@ -1,30 +1,22 @@
-
+/* CATEGORY */
 .hidden {
 	display: none;
 }
 
-main{
-	background-color:#FFD073;
-	
+article {
+	left: 10%;
+	min-width: 600px;
+	width: 100%;
+	max-width: 800px;
+	border: thin solid #333;
+	margin: 1rem auto;
 }
 
-article {
-	min-width: 800px;
-	max-width: 1280px;
-	height: 300px;
-	border-radius: 10px;
-    box-shadow: 0 0 0 3px #ff4f00;
-	margin-top: 20px;
-	
-}
-.p{
-	text-align: right;
-}
 .name {
-	font-family: Helvetica;
-	font-size: 1.6rem;
-	font-weight: 600;
-	padding: 0.5rem;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.5rem;
 }
 
 .description {
@@ -35,28 +27,46 @@ article {
 
 .price {
 	text-align: right;
-	font-weight: 600px;
+	font-weight: 600;
 	font-family: Helvetica;
-	
+	padding: 1rem;
+	font-size: 250%;
 }
 
 .price:after {
 	content: "р."
 }
 
-.wrap {
+.price1 {
+	text-align: right;
+	font-weight: 600;
+	font-family: Helvetica;
+	padding: 1rem;
+	font-size: 250%;
+}
+
+.wrap1 {
 	display: flex;
 }
 
 .wrap figure {
-	
+	margin: 0 .5rem;
 	width: 33%;
 	height: auto;
 }
 
+h1 {
+    color: #3f3f3f;
+    font-family: rsl;
+    font-size: 220%;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .wrap img {
-	max-width: 50%;
+    max-width: 60%;
 	height: auto;
+	margin: 0 auto;
 }
 
 .tools {
@@ -71,3 +81,20 @@ article {
 	width: 100%;
 }
 
+#gallery .element {
+    background-color: #f9f9f9;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 0 3px #dadada;
+    margin: 15px 0;
+    position: relative;
+	width: 40%;
+	margin: 20px auto;
+}
+
+#gallery {
+	margin: 0 auto;
+}
+
+.korzina {
+	margin: 10px;
+}

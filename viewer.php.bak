@@ -39,7 +39,7 @@
 			</figure>
 			
 			<blockquote><?=$result["description"]?></blockquote>
-			<p> Категория - <?=$result["category"]?></p>
+			<p> Категория - </p> <?=$result["category"]?>
 			
 			<?php
 				$property = json_decode($result["property"], TRUE);

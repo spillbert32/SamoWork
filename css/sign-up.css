@@ -50,8 +50,11 @@ h2{
 	margin: 1rem auto;
 	font-size: 1rem;
 }
-
-
+#sign-up a {
+width: 90%;
+	margin: 1rem auto;
+	font-size: 1rem;
+}
 
 /* *#SIGN-UP */
 
@@ -59,7 +62,9 @@ h2{
 input {
 	margin: 10px 0;
 }
-
+a {
+	margin: 10px 0;
+}
 form p {
 	margin: 0 0 0 10px;
 }

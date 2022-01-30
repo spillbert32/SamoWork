@@ -92,9 +92,6 @@
 				<label>Название</label>
 				<input type="text" placeholder="Название" name="name" maxlength="50" required value="<?=$result["name"]?>">
 				
-				<label>Выберите изображение</label>
-				<input type="file" name="img" accept="image/jpeg,image/png">
-				
 				<label>Описание</label>
 				<textarea placeholder="Описание" name="description" required rows="4" style="resize: none;" maxlength="255"><?=$result["description"]?></textarea>
 				

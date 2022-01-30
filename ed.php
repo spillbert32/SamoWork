@@ -4,15 +4,15 @@
 	
 	db_connect();
 
-	if(!empty($_GET["product"]) && isset($_GET["product"])) {
+	if(!empty($_GET["custom"]) && isset($_GET["custom"])) {
 		
-		$id = $_GET["product"];
+		$id = $_GET["custom"];
 		
-		if(isset($_POST["product-edit"])) {
+		if(isset($_POST["custom-edit"])) {
 			
-			$name = htmlentities(mysqli_real_escape_string($conn,$_POST["name"]));
-			$description = htmlentities(mysqli_real_escape_string($conn,$_POST["description"]));
-			$price = htmlentities(mysqli_real_escape_string($conn,$_POST["price"]));
+			$fname = htmlentities(mysqli_real_escape_string($conn,$_POST["fname"]));
+			$sname = htmlentities(mysqli_real_escape_string($conn,$_POST["sname"]));
+			$patronymic = htmlentities(mysqli_real_escape_string($conn,$_POST["patronymic"]));
 
 			// процесс преобразование пары свойство/значение в строку формата JSON
 			$property_name = $_POST["property-name"]; // получаем наши массивы
@@ -35,26 +35,16 @@
 			
 			//var_dump($property);
 			
-			if( $_FILES["img"]["error"] == UPLOAD_ERR_OK )
-				if ( is_uploaded_file($_FILES["img"]["tmp_name"])) {
-						$tmpPath = $_FILES["img"]["tmp_name"];
-						$toBuffer = file_get_contents($tmpPath);  
-						$type = mime_content_type($tmpPath); 
-						$img = "data:$type;base64," . base64_encode($toBuffer);
-						
-						
-					} 
-			
 			// последний этап преобразуем массив в строку формата JSON
 			$property = json_encode($property, JSON_UNESCAPED_UNICODE); //второй параметр чтобы отменить кодирование многобайтных символов
 		
-			db_update_product($id, $name, $description,  $img, $property, $price);
+			db_update_custom($id, $fname, $sname, $patronymic);
 			
 		}
 		
-		$id = $_GET["product"];
+		$id = $_GET["custom"];
 		
-		$result = get_product($id)[0]; // мы знаем что вернётся только одна строка
+		$result = get_custom($id)[0]; // мы знаем что вернётся только одна строка
 		//var_dump($result);
 		$property = json_decode($result["property"], TRUE);
 		//var_dump($property);
@@ -85,27 +75,24 @@
 		<h2>Редактирование</h2>
 				
 		<!-- Форма служит так же для отправки файла изображения -->
-		<form id="product" class="add" method="post">
+		<form id="custom" class="add" method="post">
 			<!-- Общая информация -->
 			<div class="box">
 				
-				<label>Название</label>
-				<input type="text" placeholder="Название" name="name" maxlength="50" required value="<?=$result["name"]?>">
+				<label>Имя</label>
+				<input type="text" placeholder="Имя" name="fname" maxlength="50" required value="<?=$result["fname"]?>">
 				
-				<label>Выберите изображение</label>
-				<input type="file" name="img" accept="image/jpeg,image/png">
+				<label>Фамилия</label>
+				<input type="text" placeholder="Фамилия" name="sname" maxlength="50" required value="<?=$result["sname"]?>">
 				
-				<label>Описание</label>
-				<textarea placeholder="Описание" name="description" required rows="4" style="resize: none;" maxlength="255"><?=$result["description"]?></textarea>
-				
-				<label>Цена</label>
-				<input type="number" placeholder="Цена" name="price" step="0.1" value="<?=$result["price"]?>" required>
+				<label>Отчество</label>
+				<input type="text" placeholder="Отчество" name="patronymic" step="0.1" value="<?=$result["patronymic"]?>" required>
 				
 				
 				
 			</div>
 			
-			<input type="submit" name="product-edit" value="Изменить">
+			<input type="submit" name="custom-edit" value="Изменить">
 			
 		</form>
 		
